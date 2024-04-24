@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 
 	"github.com/songgao/packets/ethernet"
@@ -18,6 +19,8 @@ func main() {
 		log.Fatal(err)
 	}
 	var frame ethernet.Frame
+
+	fmt.Println("running tun")
 
 	for {
 		frame.Resize(1500)
